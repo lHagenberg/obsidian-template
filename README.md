@@ -1,0 +1,2 @@
+# quick overview
+This repo was created to serve as a template for using obsidian. It includes all the settings and plugins I use and it should hopefully work straight out of the box. There is documentation included in the vault that should hopefully help you through getting started with it. Lastly, there are some example files that I left in that you can of course incinerate whenever you want (as long as you don't incinerate the templates).
