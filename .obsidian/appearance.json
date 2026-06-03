@@ -1,0 +1,14 @@
+{
+  "cssTheme": "AnuPpuccin",
+  "interfaceFontFamily": "",
+  "textFontFamily": "",
+  "monospaceFontFamily": "",
+  "enabledCssSnippets": [
+    "task-formatting",
+    "obsidian-fonts",
+    "S - Checkboxes"
+  ],
+  "nativeMenus": false,
+  "baseFontSize": 17,
+  "showRibbon": true
+}

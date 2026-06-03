@@ -1,0 +1,20 @@
+.tasks-backlink-preview-heading {
+  font-size: 14px;
+}
+
+/* [+] underline */
+li[data-task="+"] .task-description span {
+    text-decoration: underline;
+}
+
+/* [x] strikethrough */
+li[data-task="x"] .task-description span {
+    text-decoration: line-through;
+}
+
+/* [>] color */
+li[data-task=">"] .task-description span {
+    color: #363a4f;
+}
+
+

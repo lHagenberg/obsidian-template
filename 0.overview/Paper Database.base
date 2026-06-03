@@ -1,0 +1,30 @@
+summaries:
+  Filled: values.filter(!value.isType("null")).length
+views:
+  - type: table
+    name: Table
+    filters:
+      and:
+        - file.folder == "2.papers"
+    order:
+      - file.name
+      - year
+      - status
+      - tags
+      - priority
+      - imported
+    sort:
+      - property: imported
+        direction: DESC
+      - property: tags
+        direction: ASC
+      - property: priority
+        direction: ASC
+      - property: file.ctime
+        direction: DESC
+    columnSize:
+      file.name: 135
+      note.year: 47
+      note.status: 71
+      note.tags: 406
+      note.priority: 110

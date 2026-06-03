@@ -1,0 +1,310 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>discuss manuscript progress</title>
+        <link
+            href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300&family=DM+Sans:ital,wght@0,300;0,400;0,600;1,300&display=swap"
+            rel="stylesheet"
+        />
+        <style>
+            :root {
+                --ink: #1c1b19;
+                --paper: #f7f5f0;
+                --warm-mid: #e8e3d8;
+                --border: #d4cfc3;
+                --muted: #7a7568;
+                --green: #3a6b4a;
+                --green-soft: #e8f0eb;
+                --amber: #b5600e;
+                --mono: "DM Mono", JetBrains Mono;
+                --sans: "DM Sans", sans-serif;
+            }
+
+            * {
+                box-sizing: border-box;
+                margin: 0;
+                padding: 0;
+            }
+
+            @page {
+                margin: 2cm 2.5cm;
+                size: A4;
+            }
+
+            html {
+                font-size: 15px;
+            }
+
+            body {
+                background: var(--paper);
+                color: var(--ink);
+                font-family: var(--sans);
+                line-height: 1.7;
+                max-width: 720px;
+                margin: 0 auto;
+                padding: 3rem 2rem 5rem;
+            }
+
+            /* ── Meeting header ──────────────────────────────────── */
+            .meeting-header {
+                border-top: 2px solid var(--ink);
+                border-bottom: 1px solid var(--border);
+                padding: 1.5rem 0 1.25rem;
+                margin-bottom: 1.5rem;
+            }
+            .meeting-purpose {
+                font-size: 1.5rem;
+                font-weight: 600;
+                letter-spacing: -0.03em;
+                line-height: 1.2;
+                margin-bottom: 1rem;
+                text-transform: capitalize;
+                color: var(--ink);
+            }
+
+            /* date + time on left, location on right */
+            .frontmatter {
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-end;
+                margin-bottom: 0.7rem;
+            }
+            .frontmatter-left {
+                display: flex;
+                column-gap: 3rem;
+            }
+            .frontmatter-field {
+                display: flex;
+                flex-direction: column;
+                gap: 0.15rem;
+            }
+            .frontmatter-label {
+                font-family: var(--mono);
+                font-size: 0.62rem;
+                letter-spacing: 0.1em;
+                text-transform: uppercase;
+                color: var(--muted);
+            }
+            .frontmatter-value {
+                font-family: var(--mono);
+                font-size: 0.8rem;
+                color: var(--ink);
+            }
+
+            /* participants on left, tags on right */
+            .meeting-footer-row {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+            .participants-row {
+                display: flex;
+                gap: 0.35rem;
+                flex-wrap: wrap;
+            }
+            .participant-chip {
+                font-family: var(--mono);
+                font-size: 0.72rem;
+                letter-spacing: 0.05em;
+                color: var(--ink);
+                background: var(--warm-mid);
+                border: 1px solid var(--border);
+                border-radius: 2px;
+                padding: 0.15rem 0.5rem;
+            }
+
+            /* ── Tags ───────────────────────────────────────────── */
+            .tags {
+                display: flex;
+                gap: 1rem;
+                flex-wrap: wrap;
+                justify-content: flex-end;
+            }
+            .tag {
+                font-family: var(--mono);
+                font-size: 0.68rem;
+                letter-spacing: 0.08em;
+                text-transform: uppercase;
+                color: var(--muted);
+            }
+            .tag::before {
+                content: "#";
+                opacity: 0.5;
+                margin-right: 0.1em;
+            }
+
+            /* ── Body content ───────────────────────────────────── */
+            #agenda-output h1 {
+                font-size: 1.2rem;
+                font-weight: 600;
+                font-family: var(--mono);
+                letter-spacing: 0em;
+                text-transform: capitalize;
+                color: var(--muted);
+                margin-top: 2.25rem;
+                margin-bottom: 0.75rem;
+                padding-bottom: 0.4rem;
+                border-bottom: 1px solid var(--border);
+            }
+            #agenda-output h2 {
+                font-size: 1.1rem;
+                font-family: var(--mono);
+                letter-spacing: 0em;
+                text-transform: capitalize;
+                color: var(--muted);
+                margin-top: 1.75rem;
+                margin-bottom: 0.5rem;
+                padding-bottom: 0.3rem;
+                border-bottom: 1px solid var(--warm-mid);
+            }
+            #agenda-output h3 {
+                font-size: 1rem;
+                font-weight: 600;
+                margin-top: 1.25rem;
+                margin-bottom: 0.4rem;
+            }
+            #agenda-output p {
+                margin-top: 0.25rem;
+            }
+            #agenda-output ul,
+            #agenda-output ol {
+                padding-left: 1.25rem;
+                margin-bottom: 0rem;
+            }
+            #agenda-output li {
+                margin-bottom: 0rem;
+            }
+            #agenda-output li > ul,
+            #agenda-output li > ol {
+                margin-bottom: 0;
+                padding-left: 1.1rem;
+            }
+            #agenda-output li > ul > li {
+                color: var(--muted);
+            }
+            #agenda-output strong {
+                font-weight: 600;
+                color: var(--ink);
+            }
+            #agenda-output em {
+                font-style: italic;
+                color: var(--amber);
+            }
+            #agenda-output strong em,
+            #agenda-output em strong {
+                color: var(--amber);
+            }
+            #agenda-output li > strong:first-child {
+                font-size: 0.95rem;
+            }
+            #agenda-output hr {
+                border: none;
+                border-top: 1px solid var(--border);
+                margin: 2rem 0;
+            }
+
+            @media print {
+                body {
+                    background: white;
+                    max-width: 100%;
+                    padding: 0;
+                }
+                .meeting-header {
+                    -webkit-print-color-adjust: exact;
+                    print-color-adjust: exact;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="meeting-header">
+            <div class="meeting-purpose">discuss manuscript
+progress</div>
+            <div class="frontmatter">
+                <div class="frontmatter-left">
+                                        <div class="frontmatter-field">
+                        <span class="frontmatter-label">Date</span>
+                        <span class="frontmatter-value">2026-03-17</span>
+                    </div>
+                                         <div class="frontmatter-field">
+                        <span class="frontmatter-label">Time</span>
+                        <span class="frontmatter-value">10:00 -
+11:00</span>
+                    </div>
+                                         <div class="frontmatter-field">
+                        <span class="frontmatter-label">Location</span>
+                        <span class="frontmatter-value">Skogen</span>
+                    </div>
+                                    </div>
+            </div>
+            <div class="frontmatter">
+                <div class="participants-row">
+                                        <span class="participant-chip">JO</span>
+                                        <span class="participant-chip">MS</span>
+                                    </div>
+                                <div class="tags">
+                     <span class="tag">type/meeting/agenda</span> 
+                </div>
+                            </div>
+        </div>
+
+        <div id="agenda-output"><h1 id="meeting-prep">meeting prep:</h1>
+<p><em>all</em>: read manuscript draft</p>
+<ul>
+<li>focus on intro and discussion alignment
+<ul>
+<li>are they well connected?</li>
+</ul></li>
+<li>send additional agenda points (<em>before meeting</em>)</li>
+</ul>
+<h1 id="notes-on-current-draft">notes on current draft:</h1>
+<p><strong>changes from previous</strong>:</p>
+<ul>
+<li><p>intro included (slightly rewritten)</p>
+<ul>
+<li>hypotheses adjusted</li>
+</ul></li>
+<li><p>discussion expanded (many new edits) <strong>still to
+do</strong>:</p></li>
+<li><p>intro needs reread:</p></li>
+<li><p>methods barely touched:</p>
+<ul>
+<li>study area description still lacking</li>
+</ul></li>
+<li><p>results barely touched:</p>
+<ul>
+<li>edits and clarifications still necessary</li>
+<li>potentially expand analysis to clarify species/growth form
+adaptation (still deciding)</li>
+</ul></li>
+<li><p>discussion needs work:</p>
+<ul>
+<li>more comprehensive literature review more</li>
+<li>implications missing</li>
+<li>still figuring out 13C discussion (sorry for the mess)</li>
+</ul></li>
+<li><p>ESM completely missing:</p>
+<ul>
+<li>statistics tables missing</li>
+<li>supporting figures missing</li>
+</ul></li>
+</ul>
+<h1 id="discussion-points">discussion points</h1>
+<p><strong>manuscript</strong>:</p>
+<ul>
+<li><p>should I analyze species/functional group level traits?</p>
+<ul>
+<li>statistics on what is now figure 3b</li>
+</ul></li>
+<li><p>which microclimatic data to include</p></li>
+<li><p>using stem biomass for analysis <strong>other</strong>:</p></li>
+<li><p>historical data (can we set a deadline?)</p></li>
+</ul>
+<p><strong>planning</strong></p>
+<ul>
+<li>next meeting date</li>
+</ul></div>
+    </body>
+</html>

@@ -1,0 +1,37 @@
+{
+  "collapse-filter": false,
+  "search": "path:2.papers OR path:3.notes OR path:4.zettle  ",
+  "showTags": true,
+  "showAttachments": false,
+  "hideUnresolved": false,
+  "showOrphans": true,
+  "collapse-color-groups": false,
+  "colorGroups": [
+    {
+      "query": "path:4.zettle  ",
+      "color": {
+        "a": 1,
+        "rgb": 6605784
+      }
+    },
+    {
+      "query": "path:2.papers  ",
+      "color": {
+        "a": 1,
+        "rgb": 14977931
+      }
+    }
+  ],
+  "collapse-display": false,
+  "showArrow": true,
+  "textFadeMultiplier": -0.4,
+  "nodeSizeMultiplier": 0.83613460944736,
+  "lineSizeMultiplier": 0.436146958937944,
+  "collapse-forces": false,
+  "centerStrength": 0.442420500154369,
+  "repelStrength": 9.26211793763507,
+  "linkStrength": 1,
+  "linkDistance": 251,
+  "scale": 0.16213718461247617,
+  "close": true
+}

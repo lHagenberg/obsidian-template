@@ -1,0 +1,2 @@
+{% for annotation in annotations %}{% if annotation.annotatedText %} - {{annotation.annotatedText}} *(p. {{annotation.page}})*{% if annotation.comment %} ^{{annotation.comment}}{% endif %} 
+{% endif %}{% endfor %}

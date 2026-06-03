@@ -1,0 +1,1 @@
+You can for instance display the contents of another file inside the current one.

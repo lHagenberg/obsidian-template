@@ -1,0 +1,137 @@
+{
+  "items": [
+    {
+      "type": "file",
+      "ctime": 1778672873671,
+      "path": "1.journal/task dump.md"
+    },
+    {
+      "type": "group",
+      "ctime": 1780046127182,
+      "items": [
+        {
+          "type": "graph",
+          "ctime": 1779963962856,
+          "title": "full graph",
+          "options": {
+            "collapse-filter": false,
+            "search": "path:2.papers OR path:3.notes OR path:4.zettle  ",
+            "showTags": true,
+            "showAttachments": false,
+            "hideUnresolved": false,
+            "showOrphans": true,
+            "collapse-color-groups": false,
+            "colorGroups": [
+              {
+                "query": "path:4.zettle  ",
+                "color": {
+                  "a": 1,
+                  "rgb": 9087722
+                }
+              },
+              {
+                "query": "path:2.papers  ",
+                "color": {
+                  "a": 1,
+                  "rgb": 14977931
+                }
+              }
+            ],
+            "collapse-display": false,
+            "showArrow": true,
+            "textFadeMultiplier": -0.4,
+            "nodeSizeMultiplier": 0.83613460944736,
+            "lineSizeMultiplier": 0.436146958937944,
+            "collapse-forces": false,
+            "centerStrength": 0.442420500154369,
+            "repelStrength": 9.26211793763507,
+            "linkStrength": 1,
+            "linkDistance": 251,
+            "scale": 0.07829475535701173,
+            "close": true
+          }
+        },
+        {
+          "type": "graph",
+          "ctime": 1779963998464,
+          "title": "notes graph",
+          "options": {
+            "collapse-filter": false,
+            "search": "path:3.notes OR path:4.zettle  ",
+            "showTags": true,
+            "showAttachments": false,
+            "hideUnresolved": false,
+            "showOrphans": true,
+            "collapse-color-groups": false,
+            "colorGroups": [
+              {
+                "query": "path:4.zettle  ",
+                "color": {
+                  "a": 1,
+                  "rgb": 9087722
+                }
+              },
+              {
+                "query": "path:2.papers  ",
+                "color": {
+                  "a": 1,
+                  "rgb": 14977931
+                }
+              }
+            ],
+            "collapse-display": false,
+            "showArrow": true,
+            "textFadeMultiplier": -0.4,
+            "nodeSizeMultiplier": 0.83613460944736,
+            "lineSizeMultiplier": 0.436146958937944,
+            "collapse-forces": false,
+            "centerStrength": 0.442420500154369,
+            "repelStrength": 9.26211793763507,
+            "linkStrength": 1,
+            "linkDistance": 251,
+            "scale": 0.1065834627601112,
+            "close": true
+          }
+        }
+      ],
+      "title": "Graphs"
+    },
+    {
+      "type": "group",
+      "ctime": 1780046204082,
+      "items": [
+        {
+          "type": "file",
+          "ctime": 1778663297801,
+          "path": "1.journal/0.projects/sftr/sftr-v0.4-scope.md"
+        }
+      ],
+      "title": "WIP"
+    },
+    {
+      "type": "group",
+      "ctime": 1780476455057,
+      "items": [
+        {
+          "type": "file",
+          "ctime": 1775552295907,
+          "path": "0.overview/Paper Database.base",
+          "title": "paper database"
+        },
+        {
+          "type": "file",
+          "ctime": 1775552289316,
+          "path": "0.overview/To Read.md",
+          "title": "read next"
+        },
+        {
+          "type": "file",
+          "ctime": 1780476435549,
+          "path": "0.overview/To Cite.md",
+          "title": "to cite"
+        }
+      ],
+      "title": "Reading & Writing"
+    }
+  ]
+}

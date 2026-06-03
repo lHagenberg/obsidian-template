@@ -1,0 +1,15 @@
+{
+  "vimMode": false,
+  "alwaysUpdateLinks": true,
+  "livePreview": true,
+  "propertiesInDocument": "visible",
+  "showInlineTitle": true,
+  "useTab": false,
+  "showLineNumber": true,
+  "newFileLocation": "current",
+  "userIgnoreFilters": [
+    ".Archive/"
+  ],
+  "promptDelete": true,
+  "trashOption": "local"
+}

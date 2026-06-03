@@ -1,0 +1,40 @@
+{
+  "database": "Zotero",
+  "noteImportFolder": "",
+  "pdfExportImageDPI": 120,
+  "pdfExportImageFormat": "jpg",
+  "pdfExportImageQuality": 90,
+  "citeFormats": [
+    {
+      "name": "Bibliography",
+      "format": "formatted-bibliography",
+      "cslStyle": "ecology"
+    },
+    {
+      "name": "Cite",
+      "format": "pandoc",
+      "cslStyle": "ecology",
+      "brackets": true
+    }
+  ],
+  "exportFormats": [
+    {
+      "name": "annotations-only",
+      "outputPathTemplate": ".temp/{{citekey}}.md",
+      "imageOutputPathTemplate": "",
+      "imageBaseNameTemplate": "",
+      "templatePath": "x_templates/annotations-only.md"
+    },
+    {
+      "name": "Add Paper",
+      "outputPathTemplate": "2.papers/@{{citekey}}.md",
+      "imageOutputPathTemplate": "",
+      "imageBaseNameTemplate": "image",
+      "templatePath": "x_templates/literature note.md"
+    }
+  ],
+  "citeSuggestTemplate": "[[{{citekey}}]]",
+  "openNoteAfterImport": true,
+  "whichNotesToOpenAfterImport": "first-imported-note",
+  "exeOverridePath": "/home/lilipad/obsidian-notes/obsidian-work/.obsidian/plugins/obsidian-zotero-desktop-connector/pdfannots2json-linux-x64"
+}
