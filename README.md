@@ -8,4 +8,5 @@ If you want to start doing your own customizatin you can refer more detailed doc
   - [Templater plugin](https://community.obsidian.md/plugins/templater-obsidian)
   - [Periodic notes plugin](https://community.obsidian.md/plugins/periodic-notes)
   - [Git plugin](https://publish.obsidian.md/git-doc/Start+here)
+    
 The rest of the plugins are kind of set it and forget it
