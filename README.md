@@ -10,3 +10,6 @@ If you want to start doing your own customizatin you can refer more detailed doc
   - [Git plugin](https://publish.obsidian.md/git-doc/Start+here)
     
 The rest of the plugins are kind of set it and forget it
+
+# acknowledgements
+The zotero setup I used is loosely based on that of [Christian B.B. Houmann](https://bagerbach.com/blog/how-i-read-research-papers-with-obsidian-and-zotero/#setting-up-zotero)
