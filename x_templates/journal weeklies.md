@@ -16,6 +16,7 @@ scheduled on or after <% start %>
 scheduled on or before <% end %>
 group by function task.scheduled.format("dddd YYYY-MM-DD")
 path includes 1.dailies
+sort by function task.file.filenameWithoutExtension
 ```
 # back log
 ```tasks
@@ -23,6 +24,7 @@ happens on or after <% lastStart %>
 filter by function return task.scheduled.moment?.isBefore(moment(), 'day') && task.scheduled.moment?.isSameOrBefore(moment('<% end %>'), 'day') || false 
 not done
 path includes 1.dailies
+sort by function task.file.filenameWithoutExtension
 ```
 # macro tasks
 - [ ]
