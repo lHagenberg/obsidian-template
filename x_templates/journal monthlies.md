@@ -12,6 +12,7 @@ type: journal/weekly
 scheduled on or after <% start %> 
 scheduled before <% end %>
 path includes 2.weeklies
+sort by function task.file.filenameWithoutExtension
 ```
 
 # macro tasks
