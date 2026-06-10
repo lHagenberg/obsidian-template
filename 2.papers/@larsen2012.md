@@ -7,7 +7,7 @@ tags:
   - nitrogen
   - phenology
 study-area: Abisko
-priority: "!!"
+rating: "**"
 type: paper/experiment
 status: read
 imported: 2026-05-28

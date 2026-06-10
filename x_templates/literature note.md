@@ -5,7 +5,7 @@ citekey: "{{citekey}}"
 year: '{{date | format("YYYY")}}'
 tags: []
 study-area:
-priority: "?"
+rating: "?"
 type:
 status: unread
 imported: '{{importDate | format("YYYY-MM-DD")}}'

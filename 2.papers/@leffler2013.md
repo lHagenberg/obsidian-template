@@ -12,7 +12,7 @@ tags:
   - isotopes/d13C
   - isotopes/d18O
 study-area: northwest Greenland
-priority: "!!"
+rating: "**"
 type: paper/experiment
 status: read
 imported: 2026-05-19
